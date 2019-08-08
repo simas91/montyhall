@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+test
+{% endblock %}
+
+{% block main %}
+<form action="/test"  method="post">
+    <table class="col s10 text-center">
+        <thead link rel="icon" href="data:,">
+            <tr>
+                <th>Condition</th>
+                <th>count</th>
+                <th>percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{conditions[0]}}</td>
+                <td>{{results[0]}}</td>
+                <td>{{percentages[0]}}</td>
+            </tr>
+            <tr>
+                <td>{{conditions[1]}}</td>
+                <td>{{results[1]}}</td>
+                <td>{{percentages[1]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+{% endblock %}

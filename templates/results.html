@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Play
+{% endblock %}
+
+{% block main %}
+<form action="/history">
+    <div class="col s10 text-center">
+        <p><h4>Results from all the games played, excluding automated games:</h4></p>
+        <br>
+        <br>
+    </div>
+    <table class="col s10 text-center">
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>count</th>
+                <th>percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{conditions[0]}}</td>
+                <td>{{results[0]}}</td>
+                <td>{{percentages[0]}} %</td>
+            </tr>
+            <tr>
+                <td>{{conditions[1]}}</td>
+                <td>{{results[1]}}</td>
+                <td>{{percentages[1]}} %</td>
+            </tr>
+            <tr>
+                <td>{{conditions[2]}}</td>
+                <td>{{results[2]}}</td>
+                <td>{{percentages[2]}} %</td>
+            </tr>
+            <tr>
+                <td>{{conditions[3]}}</td>
+                <td>{{results[3]}}</td>
+                <td>{{percentages[3]}} %</td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+{% endblock %}

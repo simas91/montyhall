@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Play
+{% endblock %}
+
+{% block main %}
+<form action="/play" method="post">
+    <table class="col s10 text-center">
+        <tr>
+            <td>
+                <div>
+                    <div>
+                        <img src="/static/question.png" name="question1" width="200" height="200">
+                    </div>
+                    <div>
+                        <p><h5>No.1</h5></p>
+                        <input type="radio" name="choice" value="0">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src="/static/question.png" name="question2" width="200" height="200">
+                    </div>
+                    <div>
+                        <p><h5>No.2</h5></p>
+                        <input type="radio" name="choice" value="1">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src="/static/question.png" name="question3" width="200" height="200">
+                    </div>
+                    <div>
+                        <p><h5>No.3</h5></p>
+                        <input type="radio" name="choice" value="2">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <p><h4>choose one of the three doors</h4></p>
+    </div>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <button class="btn btn-primary" type="submit">continue</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+result
+{% endblock %}
+
+{% block main %}
+<form action="/result" method="post">
+    <table class="col s10 text-center">
+        <tr>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.0}} name="question1" width="200" height="200">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.1}} name="question2" width="200" height="200">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.2}} name="question3" width="200" height="200">
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <p>
+        <h3><b>{{text}}</b></h3>
+        </p>
+    </div>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <button class="btn btn-primary" type="submit">play again</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Switch
+{% endblock %}
+
+{% block main %}
+<form action="/playRound2" method="post">
+    <table class="col s10 text-center">
+        <tr>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.0}} name="question1" width="200" height="200">
+                    </div>
+                    <div>
+                        <input type="radio" name="choice" value="0" {{button.0}} {{checked.0}}>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.1}} name="question2" width="200" height="200">
+                    </div>
+                    <div>
+                        <input type="radio" name="choice" value="1" {{button.1}} {{checked.1}}>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <div>
+                        <img src={{source.2}} name="question3" width="200" height="200">
+                    </div>
+                    <div>
+                        <input type="radio" name="choice" value="2" {{button.2}} {{checked.2}}>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <p><h4>
+            You chose No.{{chosenNumber}} , you can stick with your choice or switch to No.{{switchNumber}}
+    </h4></p>
+    </div>
+    <br>
+    <br>
+    <div class="col s10 text-center">
+        <button class="btn btn-primary" type="submit">continue</button>
+    </div>
+</form>
+{% endblock %}
